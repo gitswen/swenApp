@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row" *ngFor="let post of posts">
+    <div class="card card-block">
+    <h4 class="card-title">Guest Name: {{post.name}}</h4>
+    <p class="card-text">Number of Guests: {{post.guest}}</p>
+    <p class="card-text">Handphone Number: {{post.hp}}</p>
+    <p class="card-text">Home Address: {{post.homeadd}}</p>
+    <p class="card-text">Mailing Address: {{post.mailing}}</p>
+    <p class="card-text">Postal Code: {{post.postal}}</p>
+    <p class="card-text">Hotel Room type: {{post.hotel}}</p>
+    <a href="" (click)="deletePost(post._id)" class="card-link">Check-Out</a>
+    </div>
+    </div>
+   </div>
+
+   
+
+   
+
+   
+
+ 

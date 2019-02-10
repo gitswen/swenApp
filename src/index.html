@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      table, th, td {
+  border: 1px solid black;
+}
+        body {
+          font-family: Arial;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        form.example input[type=text] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid grey;
+          float: left;
+          width: 80%;
+          background: #f1f1f1;
+        }
+        
+        form.example button {
+          float: left;
+          width: 20%;
+          padding: 10px;
+          background: #2196F3;
+          color: white;
+          font-size: 17px;
+          border: 1px solid grey;
+          border-left: none;
+          cursor: pointer;
+        }
+        
+        form.example button:hover {
+          background: #0b7dda;
+        }
+        
+        form.example::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        </style>
+  <meta charset="utf-8">
+  <title>SwenApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-
+alpha.5/css/bootstrap.css">
+</head>
+<body>
+  <div style="text-align:center">
+    ROOM BOOKING
+    <br>
+    <p><form action="/quotes" method="POST">
+    <input type = "text" pattern="[a-zA-Z]*" style="text-transform: uppercase" required  placeholder="Guest Name" name="name" />
+    <input type = "number" required min="1" max="5" placeholder="Number of Guests" name="guest" />
+    <input type = "number" required placeholder="Mobile Number" name="hp" />
+    <input type = "text" required placeholder="House Address" name="homeadd" />
+    <input type = "text" required placeholder="Mailing Address" name="mailing" />
+    <input type = "number" required min="100000" max="999999" maxlength="6" placeholder="Postal Code" name="postal" />
+    <input type ="number" required min="1" max="2" maxlength="1" placeholder="Hotel Room Type" name="hotel"/>
+    <button type="submit">Check-In</button>
+  </form></p>
+  <app-root></app-root>
+  </div>
+
+
+  <br><br><br>
+  <h2>Room availbility</h2>
+
+  <div>
+      <table style="width:100%">
+          <tr>
+            <th>Room ID</th>
+            <th>Room status</th> 
+            <th>Room price</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Vacant</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Pending Cleaning</td>
+            <td>$270</td>
+          </tr>
+        </table>
+  </div>
+
+
+
+
+  <br><br><br>
+  <h2>facilities and room</h2>
+  <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+    <input type="text" placeholder="Search.." name="search2">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+
+
+  <div>
+    <table style="width:100%">
+      <tr>
+        <th>Room/facility ID</th>
+        <th>Room status</th> 
+        <th>staff in-charge</th>
+        <th>last cleaned time</th>
+        <th>next cleaned time</th>
+      </tr>
+      <tr>
+        <td>Room 1</td>
+        <td>pending cleaning</td>
+        <td>Andy</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Room 2</td>
+        <td>pending cleaning</td>
+        <td>Andy</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Gym</td>
+        <td>-</td>
+        <td>Andy</td>
+        <td>1PM 12 Dec 18</td>
+        <td>12PM 13 Dec 18</td>
+      </tr>
+    </table>
+  </div>
+
+  
+  <br><br><br>
+  <h2>staff</h2>
+  <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+    <input type="text" placeholder="Search.." name="search2">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+  <div>
+      <table style="width:100%">
+          <tr>
+            <th>Staff ID</th>
+            <th>Name</th> 
+            <th>address</th>
+            <th>phone</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Jeremy</td>
+            <td>55555</td>
+            <td>81818181</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Andy</td>
+            <td>111111</td>
+            <td>18181818</td>
+          </tr>
+        </table>
+  </div>
+
+
+
+
+  <br><br><br>
+  <h2>work schudule</h2>
+  <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+    <input type="text" placeholder="Search.." name="search2">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+  <div>
+      <table style="width:100%">
+          <tr>
+            <th>Staff ID</th>
+            <th>Name</th> 
+            <th>in charge of</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Jeremy</td>
+            <td>Room 1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Andy</td>
+            <td>Gym</td>
+          </tr>
+        </table>
+  </div>
+<br><br><br><br>
+</body>
+</html>
